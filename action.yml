@@ -1,0 +1,31 @@
+name: "ECZ-ID API Trust"
+description: "Review API identity/current-state declarations and optional API Passport references without API SAST, DAST or ownership inference."
+author: EcoCitizenz Ltd
+branding:
+  icon: shield
+  color: green
+inputs:
+  report-path:
+    description: "Path for the local JSON evidence report."
+    required: false
+    default: "eczid-api-trust.json"
+outputs:
+  result-state:
+    description: "NOT_APPLICABLE, OBSERVED or REVIEW_RECOMMENDED."
+  openapi-count:
+    description: "Observed OpenAPI/Swagger surface count."
+  graphql-count:
+    description: "Observed GraphQL schema path count."
+  passport-present:
+    description: "Whether an API Passport carry-card was declared."
+  next-action:
+    description: "One neutral next action."
+  next-action-url:
+    description: "Free API Passport or Resolver route when applicable."
+  reason-codes:
+    description: "Deterministic reason-code list."
+  report-path:
+    description: "Generated local JSON report path."
+runs:
+  using: node24
+  main: dist/index.js
