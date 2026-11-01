@@ -1,5 +1,5 @@
 name: "ECZ-ID API Trust"
-description: "Review API identity/current-state declarations and optional API Passport references without API SAST, DAST or ownership inference."
+description: "Review API identity and current-state declarations without acting as a generic vulnerability scanner."
 author: EcoCitizenz Ltd
 branding:
   icon: shield
